@@ -8,7 +8,10 @@ app.registerEnv(DotEnv);
 createNamespace('request');
 
 /**
- *
+ * Use:
+ * This is the scoped global helper that gives access to the service
+ * container. It's an easy way to resolve registered services
+ * from the active scoped service provider.
  */
 global.use = <K extends keyof Application.Services>(
   namespace: K,
