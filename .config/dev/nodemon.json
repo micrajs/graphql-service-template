@@ -1,0 +1,6 @@
+{
+  "watch": ["src"],
+  "ext": "ts, tsx, gql, graphql",
+  "ignore": [".test.ts"],
+  "exec": "yarn build && APP_ENV=dev node .micra"
+}
