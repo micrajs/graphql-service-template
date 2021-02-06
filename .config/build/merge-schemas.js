@@ -1,10 +1,19 @@
 require('dotenv-flow').config();
 const fg = require('fast-glob');
 const { join, sep } = require('path');
-const { writeFileSync, readFileSync, existsSync, unlinkSync, mkdirSync } = require('fs');
+const {
+  writeFileSync,
+  readFileSync,
+  existsSync,
+  unlinkSync,
+  mkdirSync,
+} = require('fs');
 
 const root = (...path) => join(__dirname, '../..', ...path);
-const pathToSchema = root(process.argv[2] || process.env.PATH_TO_SCHEMA || '.micra', 'schema.gql');
+const pathToSchema = root(
+  process.argv[2] || process.env.PATH_TO_SCHEMA || '.micra',
+  'schema.gql',
+);
 const makeSurePathExists = (fullPath) => {
   const [initial, ...pieces] = fullPath.split(sep);
   pieces.pop();
@@ -17,7 +26,7 @@ const makeSurePathExists = (fullPath) => {
 
     return path;
   }, initial);
-}
+};
 
 console.log('Merging schema files...');
 const files = fg.sync([root('src/**/*.graphql'), root('src/**/*.gql')]);

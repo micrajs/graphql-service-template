@@ -27,7 +27,7 @@ export class GraphQLServiceProvider extends ServiceProvider {
      */
     graphql.schema(
       readFileSync(
-        join(__dirname, '../..', graphqlConfig.pathToSchema),
+        join(__dirname, '../..', graphqlConfig.pathToSchema, 'schema.gql'),
         'utf-8',
       ),
     );

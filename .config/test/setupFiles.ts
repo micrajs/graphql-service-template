@@ -7,13 +7,10 @@ import { createNamespace } from 'cls-hooked';
 import { app } from '../../src/app/bootstrap';
 import type { ServiceContainer } from '@micra/core';
 
-(async () => {
-  await app.start();
-  /**
-   * Extending global helpers
-   */
-  app.container?.value('container', app.container);
-})()
+/**
+ * Start application
+ */
+(async () => await app.start())();
 
 /**
  * Scope
@@ -22,7 +19,9 @@ import type { ServiceContainer } from '@micra/core';
  * other tests. Simply wrap your test functions inside it.
  */
 const testScope = createNamespace('test');
-global.scope = <Args extends Array<any> = []>(callback: (...args: Args) => any) => {
+global.scope = <Args extends Array<any> = []>(
+  callback: (...args: Args) => any,
+) => {
   return async (...args: Args) => {
     return await testScope.runPromise(async () => {
       const scopeContainer = app.container?.clone() as ServiceContainer;

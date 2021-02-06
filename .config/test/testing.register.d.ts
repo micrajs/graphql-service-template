@@ -2,7 +2,9 @@
  * Scope function
  */
 declare const scope: ApplicationScope;
-type ApplicationScope = <Args extends Array<any> = []>(callback: (...args: Args) => any) => (...args: Args) => any;
+type ApplicationScope = <Args extends Array<any> = []>(
+  callback: (...args: Args) => any,
+) => (...args: Args) => any;
 
 /**
  * Global:

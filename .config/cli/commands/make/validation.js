@@ -48,10 +48,7 @@ const MakeValidation = {
       const FILES = [
         // [PATH, TEMPLATE]
         [
-          domains(
-            DOMAIN.SINGULAR.KEBAB,
-            `data/validations/${NAME.CAMEL}.ts`,
-          ),
+          domains(DOMAIN.SINGULAR.KEBAB, `data/validations/${NAME.CAMEL}.ts`),
           template('domains.data.validation'),
         ],
       ];
