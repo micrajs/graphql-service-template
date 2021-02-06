@@ -16,12 +16,6 @@
 
 <!-- TODO -->
 
-## Installation
-
-```sh
-yarn add @micra/rest-service-template
-```
-
 ## Author
 
 - [Olavo Amorim Santos](https://github.com/olavoasantos)
