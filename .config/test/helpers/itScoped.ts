@@ -1,3 +1,5 @@
+
+import '../testing.register.d';
 import type { Global } from '@jest/types';
 
 it.scoped = function ItScoped(testName: Global.TestName, fn: Global.TestFn, timeout?: number) {
