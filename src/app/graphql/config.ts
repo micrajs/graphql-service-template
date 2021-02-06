@@ -11,6 +11,11 @@ app.config.set<GraphQLConfig>('graphql', {
   options: {
     context,
     formatError,
+    engine: false,
+    introspection: env('APP_ENV', 'prod') === 'dev',
+    mockEntireSchema: false,
+    mocks: false,
     playground: env('APP_ENV', 'prod') === 'dev',
+    tracing: env('APP_ENV', 'prod') === 'dev',
   },
 });
