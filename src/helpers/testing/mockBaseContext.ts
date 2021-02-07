@@ -19,6 +19,6 @@ export const mockBaseContext = (
     url: config('graphql').graphqlPath ?? '/graphql',
   },
 ) => ({
-  req: new (MockExpressRequest as any)(requestOptions),
-  res: new (MockExpressResponse as any)(),
+  req: new MockExpressRequest(requestOptions),
+  res: new MockExpressResponse(),
 });
