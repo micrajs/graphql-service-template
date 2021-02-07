@@ -24,7 +24,7 @@
       "app/*": ["src/app/*"],
       "domains/*": ["src/domains/*"],
       "helpers/*": ["src/helpers/*"],
-      "testing/*": ["src/testing/*"],
+      "testing/*": ["src/helpers/testing/*"],
       "resolvers/*": ["src/resolvers/*"]
     }
   },

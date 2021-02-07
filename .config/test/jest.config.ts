@@ -23,7 +23,7 @@ export default {
     config('test/setupFiles.ts'),
   ],
   setupFilesAfterEnv: [
-    config('test/helpers/clearJointSchema.ts'),
     config('test/setupFilesAfterEnv.ts'),
+    config('test/helpers/clearJointSchema.ts'),
   ],
 };

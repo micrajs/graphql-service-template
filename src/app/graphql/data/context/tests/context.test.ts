@@ -1,5 +1,5 @@
 import { context } from 'app/graphql/data/context';
-import { mockBaseContext } from 'testing/helpers/mockBaseContext';
+import { mockBaseContext } from 'helpers/testing/mockBaseContext';
 
 describe('context tests', () => {
   it('should return the base context', async () => {
