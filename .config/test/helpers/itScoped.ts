@@ -2,6 +2,12 @@
 import '../testing.register.d';
 import type { Global } from '@jest/types';
 
+/**
+ * scoped:
+ * Execute a test function within a scoped container. This allows
+ * you to mutate the service container without leaking
+ * the changes to other tests.
+ */
 it.scoped = function ItScoped(testName: Global.TestName, fn: Global.TestFn, timeout?: number) {
   return it(testName, scope(fn), timeout);
 } as Global.It;
