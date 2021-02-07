@@ -1,3 +1,13 @@
+declare namespace Application {
+  interface Services {
+    /**
+     * server/request:
+     * This is only available in the test environment.
+     */
+    'server/request': import('./helpers/mockServer').MockedServer;
+  }
+}
+
 /**
  * Scope function
  */

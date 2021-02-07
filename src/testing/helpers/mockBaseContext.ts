@@ -14,9 +14,11 @@ export interface MockRequestOptions {
   url?: string;
 }
 
-export const mockBaseContext = (requestOptions: MockRequestOptions = {
-  url: config('graphql').graphqlPath ?? '/graphql',
-}) => ({
+export const mockBaseContext = (
+  requestOptions: MockRequestOptions = {
+    url: config('graphql').graphqlPath ?? '/graphql',
+  },
+) => ({
   req: new (MockExpressRequest as any)(requestOptions),
   res: new (MockExpressResponse as any)(),
 });

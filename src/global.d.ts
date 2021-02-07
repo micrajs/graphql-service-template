@@ -9,14 +9,16 @@ declare namespace jest {
      * the changes to other tests.
      */
     scoped: import('@jest/types').Global.It;
-  }
+  };
 }
 
 declare module 'mock-express-response' {
   export default class MockExpressResponse {
-    new (options?: Record<string, any>): import('express').Response & {
+    new(
+      options?: Record<string, any>,
+    ): import('express').Response & {
       _getJSON(): Record<string, any>;
       _getString(): string;
     };
-  };
+  }
 }

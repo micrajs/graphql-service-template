@@ -5,12 +5,19 @@ import '../../src/global.d';
 import './testing.register.d';
 import { createNamespace } from 'cls-hooked';
 import { app } from '../../src/app/bootstrap';
+import { mockServer } from './helpers/mockServer';
 import type { ServiceContainer } from '@micra/core';
 
 /**
  * Start application
  */
 (async () => await app.start())();
+
+/**
+ * server/request
+ * This helper allows you to execute an HTTP request to the server.
+ */
+app.container.value('server/request', mockServer(app.container.use('server')));
 
 /**
  * Scope
