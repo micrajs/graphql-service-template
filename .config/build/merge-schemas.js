@@ -11,7 +11,7 @@ const {
 
 const root = (...path) => join(__dirname, '../..', ...path);
 const pathToSchema = root(
-  process.argv[2] || process.env.PATH_TO_SCHEMA || '.micra',
+  process.env.PATH_TO_SCHEMA || '.micra',
   'schema.gql',
 );
 const makeSurePathExists = (fullPath) => {

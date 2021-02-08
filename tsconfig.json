@@ -19,15 +19,14 @@
     "declaration": false,
     "jsx": "react",
     "outDir": ".micra",
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "app/*": ["src/app/*"],
-      "domains/*": ["src/domains/*"],
-      "helpers/*": ["src/helpers/*"],
-      "testing/*": ["src/helpers/testing/*"],
-      "resolvers/*": ["src/resolvers/*"]
+      "app/*": ["app/*"],
+      "domains/*": ["domains/*"],
+      "helpers/*": ["helpers/*"],
+      "testing/*": ["helpers/testing/*"],
+      "resolvers/*": ["resolvers/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", ".config/test/testing.register.d.ts"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", ".config/test/testing.register.d.ts"]
 }

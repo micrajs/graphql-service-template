@@ -10,7 +10,7 @@
     ".micra/**/*"
   ],
   "scripts": {
-    "build": "yarn rimraf ./.micra && yarn merge-schemas && cross-env APP_ENV=dev NODE_ENV=development tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
+    "build": "yarn rimraf ./.micra && yarn merge-schemas && cross-env APP_ENV=dev NODE_ENV=development tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json",
     "build:staging": "yarn rimraf ./.micra && yarn merge-schemas && cross-env APP_ENV=staging NODE_ENV=production tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
     "build:prod": "yarn rimraf ./.micra && yarn merge-schemas && cross-env APP_ENV=prod NODE_ENV=production tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
     "format": "prettier --write 'src/**/*.{ts,tsx}' --config .prettierrc.js",
@@ -40,6 +40,7 @@
     "@typescript-eslint/eslint-plugin": "^4.14.2",
     "@typescript-eslint/parser": "^4.14.2",
     "apollo-graphql": "^0.6.0",
+    "apollo-server-core": "^2.19.2",
     "cross-env": "^7.0.3",
     "dotenv-flow": "^3.2.0",
     "eslint": "^7.19.0",
@@ -66,7 +67,6 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
-    "@apollo/federation": "^0.21.0",
     "@micra/apollo-express-kernel": "^0.0.5",
     "@micra/application": "^0.0.11",
     "@micra/core": "^0.0.8",
@@ -75,9 +75,6 @@
     "@micra/micra-graphql-container": "^0.0.1",
     "@micra/service-provider": "^0.0.2",
     "@micra/typedi-service-container": "^0.0.1",
-    "@micra/validation-rules": "^0.0.9",
-    "@micra/validator": "^0.0.7",
-    "apollo-server-core": "^2.19.2",
     "apollo-server-express": "^2.19.2",
     "body-parser": "^1.19.0",
     "cls-hooked": "^4.2.2",

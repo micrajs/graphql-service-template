@@ -925,16 +925,6 @@
     tslib "^2.0.3"
     typedi "^0.8.0"
 
-"@micra/validation-rules@^0.0.9":
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/@micra/validation-rules/-/validation-rules-0.0.9.tgz#b3d237cfe85784f90473cb1c3263cb75901a5e00"
-  integrity sha512-hWfc8UyjHLoMXEa6+OMvOdpQInOOOBamRYyBzcyMnCpMTAU1wlC6yRGAQcUOzqee38FmQidYbWlKW4huVm4qdA==
-
-"@micra/validator@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@micra/validator/-/validator-0.0.7.tgz#10701c9769b3d93395a3b62f458299f97fb6956c"
-  integrity sha512-5UijzAmlO9nHlD99zIhpdY23fTAnRrUTNm3Tale/irGHoSHs2kHKvBD+mkPFM1f2HtWFR+zY0iOVRhtJIH4kHA==
-
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.3.tgz#3a582bdb53804c6ba6d146579c46e52130cf4a3b"
