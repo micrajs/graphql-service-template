@@ -27,6 +27,7 @@
     "@commitlint/config-conventional": "^11.0.0",
     "@jest/types": "^26.6.2",
     "@micra/cli": "^0.0.25",
+    "@micra/core": "^0.0.8",
     "@types/body-parser": "^1.19.0",
     "@types/cls-hooked": "^4.3.3",
     "@types/cors": "^2.8.9",
@@ -68,8 +69,7 @@
   },
   "dependencies": {
     "@micra/apollo-express-kernel": "^0.0.5",
-    "@micra/application": "^0.0.11",
-    "@micra/core": "^0.0.8",
+    "@micra/application": "^0.0.12",
     "@micra/dot-env": "^0.0.3",
     "@micra/kernel": "^0.0.3",
     "@micra/micra-graphql-container": "^0.0.1",

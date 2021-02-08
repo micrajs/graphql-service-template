@@ -15,8 +15,8 @@ declare namespace jest {
 declare module 'mock-express-request' {
   declare const MockExpressRequest: import('@micra/core').Static<
     import('express').Request,
-    [options?: Record<string, any>],
-    >;
+    [options?: Record<string, any>]
+  >;
   export default MockExpressRequest;
 }
 
@@ -26,7 +26,7 @@ declare module 'mock-express-response' {
       _getJSON(): Record<string, any>;
       _getString(): string;
     },
-    [options?: Record<string, any>],
-    >;
+    [options?: Record<string, any>]
+  >;
   export default MockExpressRequest;
 }
