@@ -1,3 +1,4 @@
 import { join } from 'path';
 
-export const PATH_TO_GLOBAL_SCHEMA = join(__dirname, '../../../src/schema.gql');
+process.env.PATH_TO_SCHEMA = 'src/schema.gql';
+export const PATH_TO_GLOBAL_SCHEMA = join(process.cwd(), process.env.PATH_TO_SCHEMA);

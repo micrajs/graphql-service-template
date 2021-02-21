@@ -35,9 +35,18 @@ if (process.env.NODE_ENV === 'test') {
   ) => {
     return async (...args: Args) => {
       return await testScope.runPromise(async () => {
-        const scopeContainer = require('@micra/application').container.clone();
-        scopeContainer.value('container', scopeContainer);
-        testScope.set('use', scopeContainer.use.bind(scopeContainer));
+        const app = require('@micra/application');
+        const container = app.container.clone();
+        container.value('container', container);
+
+        testScope.set('use', (namespace: keyof Application.Services) => {
+          try {
+            return container.use(namespace);
+          } catch (e) {
+            return app.container.use(namespace);
+          }
+        });
+
         await callback(...args);
       });
     };
