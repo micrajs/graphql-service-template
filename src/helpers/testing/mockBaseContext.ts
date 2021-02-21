@@ -2,6 +2,7 @@
 import MockExpressRequest from 'mock-express-request';
 import MockExpressResponse from 'mock-express-response';
 import type { Response } from 'express';
+import type { DefaultContext } from 'app/graphql/types';
 
 export interface MockRequestOptions {
   headers?: Record<string, any>;
@@ -17,10 +18,10 @@ export interface MockRequestOptions {
 
 export const mockBaseContext = (
   requestOptions: MockRequestOptions = {},
-) => ({
+): DefaultContext => ({
   req: new MockExpressRequest({
     url: config('graphql').graphqlPath ?? '/graphql',
-    ...requestOptions
+    ...requestOptions,
   }),
   res: new MockExpressResponse({}),
 });

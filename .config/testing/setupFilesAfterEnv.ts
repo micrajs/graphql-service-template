@@ -9,10 +9,7 @@ import { PATH_TO_GLOBAL_SCHEMA } from './helpers/constants';
 beforeAll(async () => {
   await app.start();
 
-  app.container.value(
-    'server/request',
-    mockServer(use<any>('server')),
-  );
+  app.container.value('server/request', mockServer(use<any>('server')));
 });
 
 afterAll(() => {

@@ -20,10 +20,10 @@ app.config.set<GraphQLConfig>('graphql', {
     playground: env('APP_ENV', 'prod') === 'dev',
     tracing: env('APP_ENV', 'prod') === 'dev',
     /**
-    * This is the main schema. This file is auto-generated on
-    * build-time and contains the combined content of all
-    * *.gql and *.graphql files in the project.
-    */
+     * This is the main schema. This file is auto-generated on
+     * build-time and contains the combined content of all
+     * *.gql and *.graphql files in the project.
+     */
     typeDefs: readFileSync(
       join(process.cwd(), env('PATH_TO_SCHEMA', '.micra/schema.gql')),
       'utf-8',

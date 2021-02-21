@@ -15,20 +15,38 @@ module.exports = {
   template: {
     domains: {
       data: {
-        'data-source': join(__dirname, './.config/cli/templates/domains/data/data-source.mustache'),
+        'data-source': join(
+          __dirname,
+          './.config/cli/templates/domains/data/data-source.mustache',
+        ),
         'service-provider': join(
           __dirname,
           './.config/cli/templates/domains/data/service-provider.mustache',
         ),
-        service: join(__dirname, './.config/cli/templates/domains/data/service.mustache'),
-        validation: join(__dirname, './.config/cli/templates/domains/data/validation.mustache'),
+        service: join(
+          __dirname,
+          './.config/cli/templates/domains/data/service.mustache',
+        ),
+        validation: join(
+          __dirname,
+          './.config/cli/templates/domains/data/validation.mustache',
+        ),
       },
       testing: {
-        factory: join(__dirname, './.config/cli/templates/domains/testing/factory.mustache'),
+        factory: join(
+          __dirname,
+          './.config/cli/templates/domains/testing/factory.mustache',
+        ),
       },
       types: {
-        interface: join(__dirname, './.config/cli/templates/domains/types/interface.mustache'),
-        service: join(__dirname, './.config/cli/templates/domains/types/service.mustache'),
+        interface: join(
+          __dirname,
+          './.config/cli/templates/domains/types/interface.mustache',
+        ),
+        service: join(
+          __dirname,
+          './.config/cli/templates/domains/types/service.mustache',
+        ),
         'data-source': join(
           __dirname,
           './.config/cli/templates/domains/types/data-source.mustache',
@@ -39,7 +57,10 @@ module.exports = {
       config: join(__dirname, './.config/cli/templates/module/config.mustache'),
       index: join(__dirname, './.config/cli/templates/module/index.mustache'),
       types: join(__dirname, './.config/cli/templates/module/types.mustache'),
-      register: join(__dirname, './.config/cli/templates/module/register.mustache'),
+      register: join(
+        __dirname,
+        './.config/cli/templates/module/register.mustache',
+      ),
     },
     helper: {
       index: join(__dirname, './.config/cli/templates/helper/index.mustache'),

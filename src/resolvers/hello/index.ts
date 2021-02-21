@@ -1,6 +1,6 @@
 export const helloResolvers = {
   Query: {
-    async hello() {
+    async hello(): Promise<'world'> {
       return 'world' as const;
     },
   },

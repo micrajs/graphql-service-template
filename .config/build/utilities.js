@@ -1,6 +1,12 @@
 const fg = require('fast-glob');
 const { join, sep } = require('path');
-const { writeFileSync, readFileSync, existsSync, unlinkSync, mkdirSync } = require('fs');
+const {
+  writeFileSync,
+  readFileSync,
+  existsSync,
+  unlinkSync,
+  mkdirSync,
+} = require('fs');
 
 const cwd = (...path) => join(process.cwd(), ...path);
 
