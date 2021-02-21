@@ -22,9 +22,9 @@
     "baseUrl": "src",
     "paths": {
       "app/*": ["app/*"],
+      "config": ["config.ts"],
       "domains/*": ["domains/*"],
       "helpers/*": ["helpers/*"],
-      "testing/*": ["helpers/testing/*"],
       "resolvers/*": ["resolvers/*"]
     }
   },

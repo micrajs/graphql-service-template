@@ -15,7 +15,7 @@ export const inScope: RequestHandler = (req, res, next) => {
     container.value('request', req);
     container.value('response', res);
 
-    scope.set('use', (namespace: string) => {
+    scope.set('use', (namespace: keyof Application.Services) => {
       try {
         return container.use(namespace);
       } catch (e) {

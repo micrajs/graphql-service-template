@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import MockExpressRequest from 'mock-express-request';
 import MockExpressResponse from 'mock-express-response';
 import type { Response } from 'express';
@@ -15,10 +16,11 @@ export interface MockRequestOptions {
 }
 
 export const mockBaseContext = (
-  requestOptions: MockRequestOptions = {
-    url: config('graphql').graphqlPath ?? '/graphql',
-  },
+  requestOptions: MockRequestOptions = {},
 ) => ({
-  req: new MockExpressRequest(requestOptions),
-  res: new MockExpressResponse(),
+  req: new MockExpressRequest({
+    url: config('graphql').graphqlPath ?? '/graphql',
+    ...requestOptions
+  }),
+  res: new MockExpressResponse({}),
 });

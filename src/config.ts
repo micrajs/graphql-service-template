@@ -1,3 +1,5 @@
+import 'app/server/config';
+import 'app/graphql/config';
 import app from '@micra/application';
 import { TypeDIServiceContainer } from '@micra/typedi-service-container';
 import { ApolloExpressKernel } from '@micra/apollo-express-kernel';

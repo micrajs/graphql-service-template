@@ -1,17 +1,14 @@
 declare namespace Application {
   interface Services {
-    graphql: import('@micra/micra-graphql-container').GraphQLContainer;
+    'graphql/schema': string;
   }
 
   interface Config {
-    graphql: import('app/graphql/types').GraphQLConfig;
+    graphql: import('@micra/apollo-express-kernel').GraphQLConfig;
   }
 
   interface EnvironmentVariables {
+    GRAPHQL_PATH: string;
     PATH_TO_SCHEMA: string;
-  }
-
-  interface Context {
-    //
   }
 }

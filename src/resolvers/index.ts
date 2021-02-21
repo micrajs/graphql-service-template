@@ -1,9 +1,6 @@
-const graphql = use('graphql');
+import combineResolvers from 'ts-deepmerge';
+import { helloResolvers } from 'resolvers/hello';
 
-graphql.resolver({
-  Query: {
-    async hello() {
-      return 'world';
-    },
-  },
-});
+export const resolvers = combineResolvers(
+  helloResolvers,
+);

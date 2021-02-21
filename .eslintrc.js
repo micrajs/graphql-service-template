@@ -52,7 +52,6 @@ module.exports = {
     'prefer-arrow-callback': 'off',
     'import/extensions': 'off',
     'import/prefer-default-export': 'off',
-    // 'import/no-default-export': ['error'],
     'no-bitwise': 'off',
     'no-fallthrough': 'off',
     'no-use-before-define': 'off',

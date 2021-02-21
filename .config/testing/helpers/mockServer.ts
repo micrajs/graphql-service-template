@@ -2,16 +2,18 @@ import '../../../src/global.d';
 import request from 'supertest';
 import type { Application } from 'express';
 import type { SuperTest, Test, Response } from 'supertest';
-import type { GraphQLConfig } from '../../../src/app/graphql/types';
+import type { GraphQLConfig } from '@micra/apollo-express-kernel';
 
 export type GraphQLResponse<T> = {
   response: Response;
   data: T | null;
   error: any | null;
 };
+
 export type GraphqlRequest = <T>(
   data: string | Record<string, any>,
 ) => Promise<GraphQLResponse<T>>;
+
 export type MockedServer = SuperTest<Test> & {
   query: GraphqlRequest;
   mutation: GraphqlRequest;
@@ -40,5 +42,5 @@ export const mockServer = (app: Application) => {
     ...server,
     query: graphqlRequest,
     mutation: graphqlRequest,
-  };
+  } as MockedServer;
 };
